@@ -11,7 +11,7 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel target="17">
+    <bytecodeTargetLevel target="21">
       <module name="ict221.ict221_garden_planner.main" target="11" />
       <module name="ict221.ict221_garden_planner.test" target="11" />
     </bytecodeTargetLevel>
