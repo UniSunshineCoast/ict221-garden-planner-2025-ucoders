@@ -1,5 +1,6 @@
 package garden_planner.gui;
 
+import garden_planner.model.GardenBed;
 import garden_planner.model.GardenPlanner;
 import garden_planner.model.RectBed;
 import javafx.application.Application;
@@ -15,13 +16,13 @@ import javafx.stage.Stage;
  * NOTE: Do NOT run this class in IntelliJ.  Run 'RunGui' instead.
  * Sample solution for Lab 5 Section 7 Optional
  */
-public class GuiMain_v1_Opt extends Application {
+public class GuiMainOpt extends Application {
 
     GardenPlanner planner;
     TextField widthField;
     TextField heightField;
 
-    public GuiMain_v1_Opt() {
+    public GuiMainOpt() {
         planner = new GardenPlanner();
         planner.createBasicDesign();
     }
@@ -43,7 +44,7 @@ public class GuiMain_v1_Opt extends Application {
 
         // Hook with a GardenPlanner instance
         // A default garden layout is created in the constructor
-        for (RectBed bed : planner.getBeds()) {
+        for (GardenBed bed : planner.getBeds()) {
             Rectangle rec = new Rectangle(bed.getWidth()*100, bed.getHeight()*100);
             rec.setX(bed.getLeft()*100);
             rec.setY(bed.getTop()*100);

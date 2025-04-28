@@ -1,15 +1,12 @@
 package garden_planner.gui;
 
+import garden_planner.model.GardenBed;
 import garden_planner.model.GardenPlanner;
-import garden_planner.model.RectBed;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -19,13 +16,12 @@ import javafx.stage.Stage;
  */
 public class GuiMain extends Application {
 
-
     @Override
     public void start(Stage primaryStage) throws Exception{
-        // Parent root = FXMLLoader.load(getClass().getResource("garden_gui.fxml"));
-        Button root = new Button("TODO: design garden planner GUI");
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        BorderPane root = FXMLLoader.load(getClass().getResource("garden_gui.fxml"));
+
+        primaryStage.setTitle("Garden Planner");
+        primaryStage.setScene(new Scene(root, 960, 600));
         primaryStage.show();
     }
 
